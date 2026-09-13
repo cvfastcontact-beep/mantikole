@@ -7,6 +7,7 @@ import BlurFade from '../../components/ui/blur-fade';
 import ArticleDetailModal from '../../components/berita/ArticleDetailModal';
 import ArticleFilterBar from '../../components/berita/ArticleFilterBar';
 import ArticleGridList from '../../components/berita/ArticleGridList';
+import JsonLd, { generateBreadcrumbSchema } from '../../components/JsonLd';
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState<any[]>([]);
@@ -58,6 +59,12 @@ export default function ArticlesPage() {
 
   return (
     <BlurFade className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16">
+      <JsonLd
+        data={generateBreadcrumbSchema([
+          { name: 'Beranda', url: '/' },
+          { name: 'Warta & Pengumuman', url: '/berita' },
+        ])}
+      />
       <AnimatePresence mode="wait" initial={false}>
         {activeArticle ? (
           <ArticleDetailModal

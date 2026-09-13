@@ -10,6 +10,7 @@ import FaqAccordion from '../components/FaqAccordion';
 import VillageStaffSection from '../components/home/VillageStaffSection';
 import BentoFeaturesSection from '../components/home/BentoFeaturesSection';
 import VillageDemographicsSection from '../components/home/VillageDemographicsSection';
+import JsonLd, { faqPageSchema } from '../components/JsonLd';
 
 export default function HomePage() {
   const [articles, setArticles] = useState<any[]>([]);
@@ -54,6 +55,8 @@ export default function HomePage() {
 
   return (
     <div className="bg-slate-50 text-slate-900 min-h-screen font-sans">
+      <JsonLd data={faqPageSchema} />
+
       {/* Hero Animated Canvas */}
       <HeroFrameScroll settings={settings} />
 

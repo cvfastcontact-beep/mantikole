@@ -16,6 +16,7 @@ Seluruh dokumentasi disusun berdasarkan tanggal dan judul fitur sesuai perkemban
 | **2026-08-27** | [`2026-08-27-custom-toast-dan-dialog-pengganti-chrome-interface.md`](./2026-08-27-custom-toast-dan-dialog-pengganti-chrome-interface.md) | Sistem notifikasi Toast/Snackbar dan modal ConfirmDialog kustom pengganti `alert()` dan `confirm()` browser. |
 | **2026-09-04** | [`2026-09-04-modernisasi-ui-ux-chatbot-avatar-morphing.md`](./2026-09-04-modernisasi-ui-ux-chatbot-avatar-morphing.md) | Modernisasi UI/UX Mantikole AI Chatbot (Off Menu Design): Looping avatar video dengan depth fade, spring morphing, thinking state, dan zero-dependency markdown parser. |
 | **2026-09-04** | [`2026-09-04-perbaikan-hydration-mismatch-browser-extension.md`](./2026-09-04-perbaikan-hydration-mismatch-browser-extension.md) | Perbaikan error React Hydration Mismatch dari injeksi atribut ekstensi browser (Scribe) via `suppressHydrationWarning`. |
+| **2026-09-13** | [`2026-09-13-optimasi-seo-aeo-dan-google-search-console.md`](./2026-09-13-optimasi-seo-aeo-dan-google-search-console.md) | Optimasi SEO, AEO (Answer Engine Optimization), skema Schema.org JSON-LD (Pemerintah Desa, Wisata, FAQ, Berita, Breadcrumbs), Dynamic XML Sitemap, AI-Permissive Robots.txt, dan verifikasi Google Search Console. |
 
 ---
 

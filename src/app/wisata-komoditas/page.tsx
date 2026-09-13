@@ -3,7 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { fetchApi } from '../../lib/api';
 import { useOutsideClick } from '../../hooks/use-outside-click';
-import JsonLd, { airPanasSchema } from '../../components/JsonLd';
+import JsonLd, { airPanasSchema, airTerjunSchema, generateBreadcrumbSchema } from '../../components/JsonLd';
 import BlurFade from '../../components/ui/blur-fade';
 
 import HighlightDetailModal from '../../components/wisata-komoditas/HighlightDetailModal';
@@ -63,7 +63,16 @@ export default function HighlightsExpandablePage() {
 
   return (
     <BlurFade className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 space-y-10">
-      <JsonLd data={airPanasSchema} />
+      <JsonLd
+        data={[
+          airPanasSchema,
+          airTerjunSchema,
+          generateBreadcrumbSchema([
+            { name: 'Beranda', url: '/' },
+            { name: 'Wisata & Komoditas', url: '/wisata-komoditas' },
+          ]),
+        ]}
+      />
 
       {/* Header */}
       <div className="space-y-3 border-b border-slate-200/80 pb-8">

@@ -6,6 +6,7 @@ import { FileText, Search } from 'lucide-react';
 import { fetchApi } from '../../lib/api';
 import LetterRequestForm from '../../components/surat/LetterRequestForm';
 import LetterTrackingSection from '../../components/surat/LetterTrackingSection';
+import JsonLd, { generateBreadcrumbSchema } from '../../components/JsonLd';
 
 function LettersContent() {
   const searchParams = useSearchParams();
@@ -121,6 +122,13 @@ function LettersContent() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 space-y-10">
+      <JsonLd
+        data={generateBreadcrumbSchema([
+          { name: 'Beranda', url: '/' },
+          { name: 'Layanan Surat Mandiri', url: '/surat' },
+        ])}
+      />
+
       {/* Page Header */}
       <div className="border-b border-slate-200/80 pb-8 space-y-3">
         <span className="text-xs font-bold uppercase tracking-widest text-slate-500">

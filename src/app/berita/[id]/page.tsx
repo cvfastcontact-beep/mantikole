@@ -7,6 +7,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { ArrowLeft, Calendar, Eye, User, Share2, ArrowUpRight } from 'lucide-react';
 import { fetchApi } from '../../../lib/api';
 import { useToast } from '../../../context/ToastContext';
+import JsonLd, { generateArticleSchema, generateBreadcrumbSchema } from '../../../components/JsonLd';
 
 export default function ArticleDetailPage() {
   const params = useParams();
@@ -72,6 +73,17 @@ export default function ArticleDetailPage() {
       layoutId={`article-${article.id}`}
       className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 space-y-10 text-slate-900"
     >
+      <JsonLd
+        data={[
+          generateArticleSchema(article),
+          generateBreadcrumbSchema([
+            { name: 'Beranda', url: '/' },
+            { name: 'Warta Desa', url: '/berita' },
+            { name: article.title, url: `/berita/${article.slug || article.id}` },
+          ]),
+        ]}
+      />
+
       {/* Navigation Top Bar */}
       <div className="flex items-center justify-between border-b border-slate-200/80 pb-6">
         <button
