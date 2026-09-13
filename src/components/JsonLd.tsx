@@ -27,6 +27,8 @@ export const villageGovernmentSchema = {
   description:
     'Kantor Pelayanan Resmi Pemerintah Desa Mantikole, Kecamatan Dolo Barat, Kabupaten Sigi, Provinsi Sulawesi Tengah. Pusat pelayanan administrasi surat mandiri dan informasi pariwisata pemandian air panas alami.',
   url: BASE_URL,
+  logo: `${BASE_URL}/logo-asli.jpeg`,
+  image: `${BASE_URL}/logo-asli.jpeg`,
   telephone: '+62-812-3456-7890',
   address: {
     '@type': 'PostalAddress',
@@ -234,7 +236,7 @@ export function generateArticleSchema(article: {
       name: 'Pemerintah Desa Mantikole',
       logo: {
         '@type': 'ImageObject',
-        url: `${BASE_URL}/globe.svg`,
+        url: `${BASE_URL}/logo-asli.jpeg`,
       },
     },
     inLanguage: 'id-ID',

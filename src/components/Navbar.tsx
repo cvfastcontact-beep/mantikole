@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FileText, Menu, X, ShieldCheck } from 'lucide-react';
 
@@ -42,11 +43,21 @@ export default function Navbar() {
             : 'max-w-7xl mx-auto py-4 bg-transparent border-b border-white/10'
         }`}
       >
-        {/* Brand Logo Icon Only */}
-        <Link href="/" className="flex items-center group">
-          <div className="w-8 h-8 bg-slate-950 text-white font-black text-sm flex items-center justify-center rounded-xl shadow-xs group-hover:bg-slate-800 transition-colors">
-            M
+        {/* Brand Logo & Title */}
+        <Link href="/" className="flex items-center space-x-2.5 group">
+          <div className="relative w-8 h-8 rounded-xl overflow-hidden shadow-xs border border-slate-200/80 group-hover:scale-105 transition-transform bg-white flex items-center justify-center">
+            <Image
+              src="/logo-asli.jpeg"
+              alt="Logo Resmi Desa Mantikole"
+              width={32}
+              height={32}
+              className="object-contain"
+              priority
+            />
           </div>
+          <span className="font-black text-xs tracking-tight text-slate-900 hidden sm:inline-block">
+            Mantikole
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

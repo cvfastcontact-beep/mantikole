@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import {
   FileText,
   LogOut,
@@ -191,8 +192,14 @@ export default function AdminPage() {
         <SidebarBody className="justify-between gap-8">
           <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto space-y-6">
             <div className="flex items-center space-x-3 py-1">
-              <div className="h-8 w-8 shrink-0 rounded-xl bg-neutral-900 text-white font-extrabold flex items-center justify-center text-sm shadow-xs">
-                M
+              <div className="relative h-8 w-8 shrink-0 rounded-xl overflow-hidden border border-neutral-300 bg-white flex items-center justify-center shadow-xs">
+                <Image
+                  src="/logo-asli.jpeg"
+                  alt="Logo Desa Mantikole"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
               </div>
               <motion.span
                 animate={{

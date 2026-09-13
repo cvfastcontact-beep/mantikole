@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { User, Lock } from 'lucide-react';
 
 interface AdminLoginFormProps {
@@ -26,8 +27,14 @@ export default function AdminLoginForm({
     <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 shadow-2xl">
         <div className="flex items-center space-x-3 border-b border-slate-800 pb-5">
-          <div className="w-10 h-10 bg-white text-slate-950 flex items-center justify-center font-black rounded-xl">
-            M
+          <div className="relative w-11 h-11 bg-white rounded-xl overflow-hidden border border-slate-700 shadow-md flex items-center justify-center shrink-0">
+            <Image
+              src="/logo-asli.jpeg"
+              alt="Logo Desa Mantikole"
+              width={44}
+              height={44}
+              className="object-contain"
+            />
           </div>
           <div>
             <h1 className="font-black text-base tracking-tight text-white uppercase">

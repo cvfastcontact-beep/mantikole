@@ -85,6 +85,16 @@ export const metadata: Metadata = {
       'Portal resmi Pemerintah Desa Mantikole, Kecamatan Dolo Barat, Kabupaten Sigi, Sulawesi Tengah. Destinasi wisata air panas alami & layanan surat mandiri.',
     images: [`${siteUrl}/images/wisata/air_panas.png`],
   },
+  icons: {
+    icon: [
+      { url: '/logo-asli.jpeg', sizes: 'any' },
+      { url: '/icon.jpeg', type: 'image/jpeg' },
+    ],
+    apple: [
+      { url: '/logo-asli.jpeg', sizes: '180x180', type: 'image/jpeg' },
+    ],
+    shortcut: ['/logo-asli.jpeg'],
+  },
   verification: {
     google: googleVerification || undefined,
   },

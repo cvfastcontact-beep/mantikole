@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { MapPin, Clock, Phone, Shield } from 'lucide-react';
 import { fetchApi } from '../lib/api';
@@ -45,9 +46,15 @@ export default function Footer() {
           
           {/* Col 1: Brand */}
           <div className="space-y-3">
-            <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 bg-slate-950 text-white font-extrabold text-base flex items-center justify-center rounded-xl">
-                M
+            <div className="flex items-center space-x-3">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-white flex items-center justify-center shrink-0">
+                <Image
+                  src="/logo-asli.jpeg"
+                  alt="Logo Desa Mantikole"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-sm tracking-tight text-slate-900 block">Desa Mantikole</span>
